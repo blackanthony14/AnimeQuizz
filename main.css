@@ -25,29 +25,6 @@
     }
   }
   
-  /* body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom, #90caf9, #2196f3);
-    color: #fff;
-    line-height: 1.5;
-  }
-  body {
-    animation: gradient 2s ease infinite;
-  }
-  
-  @keyframes gradient {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  } */
-  
-  
   header {
     text-align: center;
   }
@@ -72,22 +49,6 @@
     max-width: 600px;
     color: #fff;
   }
-  
-  /* button {
-    background-color: #ffffff00;
-    color: #ffffff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-  }
-  
-  button:hover {
-    background-color: #2196f3;
-    color: #fff;
-  } */
 
   .center {
     margin-top: 50px;
@@ -171,5 +132,45 @@
   @media (max-width: 600px) {
     .social-panel {
       display: none;
+    }
+  }
+
+
+  @media (max-width: 768px) {
+
+    body {
+      font-size: 14px;
+    }
+  
+    h1 {
+      font-size: 24px;
+    }
+  
+    h2 {
+      font-size: 20px;
+    }
+  
+    .quiz-option {
+      font-size: 1rem;
+    }
+  
+    .center {
+      margin: 10px 0;
+    }
+  
+    .btn {
+      width: 120px;
+      height: 40px;
+      font-size: 14px;
+    }
+  
+    svg {
+      width: 120px;
+      height: 40px;
+      stroke-width: 1.5px;
+    }
+  
+    .btn span {
+      font-size: 14px;
     }
   }
