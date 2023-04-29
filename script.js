@@ -26,6 +26,11 @@ $(document).ready(function () {
     
         const data = await response.json();
         if (data.data) {
+          if(animeData.includes(data)){
+            continue;
+          }
+          animeData.push(data);
+          console.log(animeData);
           return data;
         }
       } catch (error) {
@@ -37,6 +42,7 @@ $(document).ready(function () {
 
   // Show question
   async function showQuestion() {
+    animeData = [];
     if (currentRound <= totalRounds) {
       quizContainer.innerHTML = "";
       const anime = await getRandomAnime();
