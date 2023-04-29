@@ -130,7 +130,7 @@ svg {
   
   #quiz-container {
     max-width: 400px;
-    height: 90vh;;
+    height: 80vh;;
     margin: 5px auto;
     align-items: center;
     justify-content: center;
@@ -171,7 +171,7 @@ svg {
   
   #quiz-container {
     max-width: 370px;
-    height: 90vh;
+    height: 80vh;
     margin: 5px auto;
     align-items: center;
     justify-content: center;

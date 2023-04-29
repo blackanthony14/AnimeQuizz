@@ -25,7 +25,7 @@ $(document).ready(function () {
         }
     
         const data = await response.json();
-        if (data) {
+        if (data.data) {
           return data;
         }
       } catch (error) {
@@ -40,7 +40,7 @@ $(document).ready(function () {
     if (currentRound <= totalRounds) {
       quizContainer.innerHTML = "";
       const anime = await getRandomAnime();
-      const imageUrl = anime.data.images.jpg.image_url;
+      const imageUrl = anime.data.images.webp.image_url;
       const op1 = await getRandomAnime();
       const op2 = await getRandomAnime();
       const options = [anime.data.title, op1.data.title, op2.data.title];
