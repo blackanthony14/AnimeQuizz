@@ -130,7 +130,7 @@ svg {
   
   #quiz-container {
     max-width: 400px;
-    height: 580px;
+    height: 90vh;;
     margin: 5px auto;
     align-items: center;
     justify-content: center;
@@ -162,13 +162,16 @@ svg {
 
 
 @media only screen and (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
   h1 {
     font-size: 2rem;
   }
   
   #quiz-container {
     max-width: 370px;
-    height: 570px;
+    height: 90vh;
     margin: 5px auto;
     align-items: center;
     justify-content: center;
