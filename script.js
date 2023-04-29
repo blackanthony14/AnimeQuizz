@@ -86,7 +86,7 @@ $(document).ready(function () {
         div.textContent = option;
         div.addEventListener("click", () => {
           clearInterval(timerInterval); // Stop the timer when an option is clicked
-          if (option === anime.name) {
+          if (option === anime.title) {
             score++;
           }
           currentQuestion++;
