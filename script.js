@@ -14,7 +14,7 @@ $(document).ready(function () {
 
   async function getRandomAnime() {
     while (true) {
-      const randomId = Math.floor(Math.random() * 2727);
+      const randomId = Math.floor(Math.random() * 10000);
       const apiUrl = `https://kitsu.io/api/edge/anime/${randomId}`;
     
       try {
@@ -41,13 +41,11 @@ $(document).ready(function () {
 
   // Show question
   async function showQuestion() {
-    console.log(currentRound);
     animeData = [];
     if (currentRound <= totalRounds) {
       quizContainer.innerHTML = "";
       const anime = await getRandomAnime();
       const imageUrl = anime.data.attributes.posterImage.original;
-      console.log(anime.data.attributes.titles.en_jp);
       const op1 = await getRandomAnime();
       const op2 = await getRandomAnime();
       const options = [anime.data.attributes.titles.en_jp, op1.data.attributes.titles.en_jp, op2.data.attributes.titles.en_jp];
