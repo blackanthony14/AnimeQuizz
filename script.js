@@ -29,7 +29,7 @@ $(document).ready(function () {
           return data;
         }
       } catch (error) {
-        console.error("There was a problem fetching the anime data:", error);
+        console.error("There was a problem fetching the anime data:");
       }
     }
   }

@@ -78,13 +78,14 @@ p{
   color: #ededed;
   margin-top: 20px;
 }
-.center {
-  margin-left: 140px;
-  margin-top: 50px;
-  width: 180px;
-  height: 60px;
-  position: absolute;
-}
+
+  .center {
+    position: relative;
+    margin-left: 32%;
+    margin-top: 30px;
+    width: 120px;
+    height: 40px;
+  }
 
 .btn {
   width: 180px;
@@ -121,3 +122,78 @@ svg {
   font-size: 18px;
   font-weight: 100;
 }
+
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+  
+  #quiz-container {
+    max-width: 400px;
+    height: 580px;
+    margin: 5px auto;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .quiz-option {
+    font-size: 1rem;
+  }
+
+  .center {
+    position: relative;
+    margin-left: 32%;
+    margin-top: 30px;
+    width: 120px;
+    height: 40px;
+  }
+
+  .btn {
+    width: 120px;
+    height: 40px;
+  }
+
+  svg {
+    stroke-width: 2px;
+    width: 120px;
+    height: 40px;
+  }
+}
+
+
+@media only screen and (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+  
+  #quiz-container {
+    max-width: 370px;
+    height: 570px;
+    margin: 5px auto;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .quiz-option {
+    font-size: 1rem;
+  }
+  .center {
+    position: relative;
+    margin-left: 32%;
+    margin-top: 30px;
+    width: 120px;
+    height: 40px;
+  }
+
+  .btn {
+    width: 120px;
+    height: 40px;
+  }
+
+  svg {
+    width: 120px;
+    height: 40px;
+    stroke-width: 2px;
+  }
+}
+
