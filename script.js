@@ -4,7 +4,7 @@ $(document).ready(function () {
   let score = 0;
   let animeData = [];
   const totalRounds = 10;
-  let currentRound = 1;
+  let currentRound = 3;
   startQuiz();
 
   // Start quiz
@@ -15,7 +15,7 @@ $(document).ready(function () {
   async function getRandomAnime() {
     while (true) {
       const randomId = Math.floor(Math.random() * 2727);
-      const apiUrl = `https://api.jikan.moe/v4/anime/${randomId}`;
+      const apiUrl = `https://kitsu.io/api/edge/anime/${randomId}`;
     
       try {
         const response = await fetch(apiUrl);
@@ -30,7 +30,6 @@ $(document).ready(function () {
             continue;
           }
           animeData.push(data);
-          console.log(animeData);
           return data;
         }
       } catch (error) {
@@ -42,14 +41,16 @@ $(document).ready(function () {
 
   // Show question
   async function showQuestion() {
+    console.log(currentRound);
     animeData = [];
     if (currentRound <= totalRounds) {
       quizContainer.innerHTML = "";
       const anime = await getRandomAnime();
-      const imageUrl = anime.data.images.webp.image_url;
+      const imageUrl = anime.data.attributes.posterImage.original;
+      console.log(anime.data.attributes.titles.en_jp);
       const op1 = await getRandomAnime();
       const op2 = await getRandomAnime();
-      const options = [anime.data.title, op1.data.title, op2.data.title];
+      const options = [anime.data.attributes.titles.en_jp, op1.data.attributes.titles.en_jp, op2.data.attributes.titles.en_jp];
       options.sort(() => Math.random() - 0.5);
   
       const img = document.createElement("img");
@@ -92,7 +93,7 @@ $(document).ready(function () {
         div.textContent = option;
         div.addEventListener("click", () => {
           clearInterval(timerInterval); // Stop the timer when an option is clicked
-          if (option === anime.title) {
+          if (option === anime.data.title) {
             score++;
           }
           currentQuestion++;
